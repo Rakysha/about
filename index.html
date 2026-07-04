@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Руслан | IT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Анимированный фон (2 слоя) -->
+  <div class="bg-video-wrapper">
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="/art.mp4" type="video/mp4">
+    </video>
+    <video autoplay loop muted playsinline class="bg-video-face">
+      <source src="/face.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay"></div>
+  </div>
+
+  <div id="app">
+    
+    <!-- Интро: Страница 1 -->
+    <div id="slide-1" class="slide">
+      <h1 class="mega-text">Приветствую!</h1>
+    </div>
+
+    <!-- Интро: Страница 2 -->
+    <div id="slide-2" class="slide hidden-slide" style="display: none;">
+      <h1 class="mega-text">Меня зовут <span class="highlight">Руслан</span></h1>
+    </div>
+
+    <!-- Интро: Страница 3 (Видео + Печать текста) -->
+    <div id="slide-3" class="slide hidden-slide" style="display: none;">
+      <div class="container hero-container">
+        <p id="typing-text" class="intro-subtitle"><span class="cursor"></span></p>
+        
+        <div id="video-wrapper" class="video-wrapper hidden-opacity">
+          <div class="video-container">
+            <div class="video-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="play-icon"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+              <span>Посмотрите видео</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="scroll-indicator" class="scroll-indicator hidden-opacity">
+          <span>Листайте ниже</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </div>
+    </div>
+
+    <main id="rest-of-site" class="hidden-opacity" style="display: none;">
+      <section class="features" id="features">
+        <div class="container">
+          <h2 class="section-title">Просто о сложном</h2>
+          <p class="section-subtitle">Вам не нужно разбираться в IT. Для этого есть я.</p>
+          
+          <div class="cards-grid">
+            <div class="card glass">
+              <h3>Для любого бизнеса</h3>
+              <p>Настраиваю кассы, компьютеры, сеть и оргтехнику. Решаю проблемы, из-за которых останавливаются продажи или работа офиса.</p>
+            </div>
+            <div class="card glass">
+              <h3>Моментальное решение</h3>
+              <p>Большинство проблем решаю удаленно за 15 минут. Если нужно — приезжаю на объект.</p>
+            </div>
+            <div class="card glass">
+              <h3>Ответственность</h3>
+              <p>В отличие от разовых мастеров, я заинтересован в том, чтобы у вас ничего не ломалось.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="uniqueness">
+        <div class="container">
+          <div class="uniqueness-box glass">
+            <h2 class="section-title">В чем моя уникальность?</h2>
+            <p class="section-subtitle">Я не просто "приходящий админ", я внедряю автоматизацию.</p>
+            
+            <div class="uniqueness-grid">
+              <div class="u-text">
+                <p>Обычные мастера просто чинят то, что сломалось. Моя цель — <strong>сделать так, чтобы ваш бизнес работал быстрее и без вашего участия. Мой практический опыт в IT — более 5 лет.</strong></p>
+                <p>Помимо настройки компьютеров (Windows/macOS/Linux) и сетей, я создаю для своих клиентов <strong>системы автоматизации бизнеса</strong>:</p>
+                <ul class="u-list">
+                  <li><strong>Умные боты для Telegram:</strong> автоматизация ответов, сбор заявок и контроль сотрудников прямо в мессенджере.</li>
+                  <li><strong>Распознавание документов (ИИ):</strong> нейросети мгновенно переносят данные паспортов и договоров в базу без риска утечек.</li>
+                  <li><strong>Интеграция систем:</strong> связываю 1С, CRM и ваши базы данных в единый работающий механизм.</li>
+                </ul>
+                <p class="u-highlight">То, за что крупные IT-студии просят <span class="strike-price">от 100 000 ₽</span>, мои клиенты получают как <strong>бесплатный бонус</strong> к качественной техподдержке.</p>
+                <a href="#cases" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Примеры →</a>
+              </div>
+              <div class="u-visual">
+                <div class="tech-pattern">
+                  <div class="code-line"><span></span><span></span></div>
+                  <div class="code-line"><span></span><span></span><span></span></div>
+                  <div class="code-line"><span></span></div>
+                  <div class="code-line"><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="offer">
+        <div class="container">
+          <div class="offer-box glass">
+            <div class="offer-content">
+              <h2>Абонентское обслуживание</h2>
+              <p>В 21 веке IT — это главная кровеносная система бизнеса, но вам не обязательно в ней разбираться. Делегируйте эту работу мне и забудьте про поиск безответственных «мастеров».</p>
+              <div class="price-comparison">
+                <div class="price-item bad glass">
+                  <span class="price-header"><span class="icon-red">❌</span> Штатный админ</span>
+                  <strong>от 50 000 ₽/мес</strong>
+                  <span class="tax">+ Налоги и больничные</span>
+                </div>
+                <div class="price-item vs">ПРОТИВ</div>
+                <div class="price-item good glass">
+                  <span class="price-header"><span class="icon-green">✅</span> Наше решение</span>
+                  <strong>3 500 ₽/мес</strong>
+                  <span class="tax">Всё включено</span>
+                  <a href="https://t.me/RUSLAN_FULLSTACK" class="btn btn-success" style="margin-top: 15px; width: 100%; font-size: 0.95rem; display: block;" target="_blank" rel="noopener noreferrer">Забронировать место</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      </section>
+
+      <!-- ПРИМЕРЫ -->
+      <section class="cases" id="cases">
+        <div class="container">
+          <h2 class="section-title">В бизнесе решают дела, а не слова</h2>
+          <p class="section-subtitle">Реальные примеры автоматизации, которые экономят деньги и время моим клиентам.</p>
+
+          <div class="cases-grid">
+            <!-- Кейс 1 -->
+            <div class="case-card glass">
+              <div class="case-number">01</div>
+              <h3 class="case-title">Чат-менеджер на ИИ</h3>
+              <div class="case-label">Производство / Оптовые продажи</div>
+              <div class="case-body">
+                <p class="case-problem"><strong>Проблема:</strong> Завод продаёт товары через мессенджеры. 100+ чатов в день. Менеджеры забывают ответить, теряют заявки, не отправляют цены. Каждый забытый чат = потерянные деньги.</p>
+                <p class="case-solution"><strong>Решение:</strong> Telegram-бот с ИИ. Сотрудник авторизуется через QR-код — и бот сам читает все чаты. ИИ не отвечает за сотрудника — вы же платите ему зарплату, верно? Вместо этого менеджер получает напоминание о незакрытых чатах каждые N минут.</p>
+                <div class="case-result">Результат: 0 потерянных клиентов. Полный контроль переписок.</div>
+              </div>
+            </div>
+
+            <!-- Кейс 2 -->
+            <div class="case-card glass">
+              <div class="case-number">02</div>
+              <h3 class="case-title">Договоры за секунды, а не за 15 минут</h3>
+              <div class="case-label">Автобизнес / Недвижимость</div>
+              <div class="case-body">
+                <p class="case-problem"><strong>Проблема:</strong> Риэлтор или менеджер автосалона тратит ~15 минут на каждый договор купли-продажи (ДКП). Вручную вбивает паспортные данные, ЕГРН, реквизиты участников сделки. Ошибки гарантированы.</p>
+                <p class="case-solution"><strong>Решение:</strong> Telegram-бот, который принимает фото документов пачкой: паспорта, ЕГРН, СТС — нейросеть распознаёт все данные и мгновенно собирает готовый договор по шаблону.</p>
+                <div class="case-result">Результат: 15 минут → 30 секунд. Без ошибок. Без ручного труда.</div>
+              </div>
+            </div>
+
+            <!-- Кейс 3 -->
+            <div class="case-card glass">
+              <div class="case-number">03</div>
+              <h3 class="case-title">Охрана труда без инспекторов</h3>
+              <div class="case-label">Стройка / Производство</div>
+              <div class="case-body">
+                <p class="case-problem"><strong>Проблема:</strong> На объекте сотни рабочих. Кто-то без каски, кто-то без спецодежды, а кто-то вообще пришёл на смену нетрезвым. Один инцидент = штрафы на сотни тысяч рублей.</p>
+                <p class="case-solution"><strong>Решение:</strong> Система на базе ИИ и OCR. Камеры на объекте отслеживают: есть ли каска? надета ли спецодежда? нет ли признаков опьянения? Нарушение — мгновенное уведомление руководителю.</p>
+                <div class="case-result">Результат: Контроль 24/7. Без штата инспекторов. Ноль штрафов.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ОТЗЫВЫ -->
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <h2 class="section-title">Отзывы клиентов</h2>
+          <p class="section-subtitle">Что говорят те, кто уже работает со мной.</p>
+
+          <div class="reviews-grid">
+            <!-- Отзыв 1 -->
+            <div class="review-card glass">
+              <div class="review-video-placeholder">
+                <span class="example-badge">EXAMPLE</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="play-icon-sm"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+              </div>
+              <div class="review-info">
+                <strong class="review-name">Имя клиента</strong>
+                <span class="review-role">Салон красоты</span>
+                <p class="review-text">«Здесь будет видео-отзыв клиента о том, как чат-бот автоматизировал запись клиентов»</p>
+              </div>
+            </div>
+
+            <!-- Отзыв 2 -->
+            <div class="review-card glass">
+              <div class="review-video-placeholder">
+                <span class="example-badge">EXAMPLE</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="play-icon-sm"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+              </div>
+              <div class="review-info">
+                <strong class="review-name">Имя клиента</strong>
+                <span class="review-role">Оптовая компания</span>
+                <p class="review-text">«Здесь будет видео-отзыв о том, как IT-поддержка сэкономила бюджет»</p>
+              </div>
+            </div>
+
+            <!-- Отзыв 3 -->
+            <div class="review-card glass">
+              <div class="review-video-placeholder">
+                <span class="example-badge">EXAMPLE</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="play-icon-sm"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+              </div>
+              <div class="review-info">
+                <strong class="review-name">Имя клиента</strong>
+                <span class="review-role">Автосалон</span>
+                <p class="review-text">«Здесь будет видео-отзыв о том, как нейросеть ускорила оформление ДКП»</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ -->
+      <section class="free-consult">
+        <div class="container">
+          <div class="consult-box glass">
+            <h2>Бесплатная диагностика вашего бизнеса</h2>
+            <p>Я <strong>бесплатно</strong> проведу диалог с вами, найду слабые места в ваших IT-процессах и предложу решение. Каждый бизнес уникален — то, чего нет у одного, всегда есть у другого.</p>
+            <div class="consult-points">
+              <div class="consult-point">
+                <span class="cp-icon">✅</span>
+                <span>Даже если у вас нет очевидных проблем — вам <strong>выгодно</strong> взять абонемент: любой админский вопрос + минимум 1 автоматизация входит в стоимость</span>
+              </div>
+              <div class="consult-point">
+                <span class="cp-icon">✅</span>
+                <span>Решение есть всегда: я нахожу боль вашего бизнеса и предлагаю конкретный план действий</span>
+              </div>
+              <div class="consult-point">
+                <span class="cp-icon">✅</span>
+                <span>Никаких обязательств: не понравится — просто уйдёте. Но такого ещё не было</span>
+              </div>
+            </div>
+            <a href="https://t.me/RUSLAN_FULLSTACK" class="btn btn-success" style="margin-top: 25px; font-size: 1.1rem;" target="_blank" rel="noopener noreferrer">Записаться на бесплатную консультацию</a>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contacts" class="footer">
+        <div class="container">
+          <h2>Контакты</h2>
+          <p>Свяжитесь со мной — обсудим, чем могу быть полезен вашему бизнесу</p>
+          <div class="contact-links">
+            <a href="https://t.me/RUSLAN_FULLSTACK" class="btn btn-primary contact-btn tg-btn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              Telegram / VK
+            </a>
+            <span class="messenger-note">Пишите в любой удобный мессенджер — отвечу везде</span>
+            <a href="tel:+79883140909" class="btn btn-success contact-btn">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              8 988 314 09-09
+            </a>
+          </div>
+          <div class="legal-block">
+            <div class="legal-badges">
+              <span class="badge-item">Самозанятый: Шарин Р. Р.</span>
+            </div>
+            <div class="payment-logos">
+              <img src="/1c.png" class="pay-icon-large" alt="1C">
+              
+              <div class="pay-icon-large yoo-logo">
+                <svg viewBox="0 0 46 33" width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.969212098298676 16.423894139886578C12.992592816635161 7.3761300567107755 20.076426465028355 0 28.978117202268432 0C37.79317202268431 0 45.08835538752363 7.400533837429111 44.986797731569 16.468809073724007C44.986797731569 25.537134215500945 37.79317202268431 32.93761814744801 28.978117202268432 32.93761814744801C20.177485066162568 32.93761814744801 12.992767485822306 25.66514177693762 12.969212098298676 16.513923629489604V28.76826465028355H7.295183364839319L0 4.7946941398865786H12.969212098298676V16.423894139886578ZM23.0000393194707 16.468809073724007C23.0000393194707 19.804266918714553 25.735758034026468 22.6185618147448 28.978117202268432 22.6185618147448C32.32178449905482 22.6185618147448 34.95604536862004 19.804266918714553 34.95604536862004 16.468809073724007C34.95604536862004 13.133351228733458 32.220226843100185 10.319056332703212 28.978117202268432 10.319056332703212C25.735758034026468 10.319056332703212 23.0000393194707 13.133351228733458 23.0000393194707 16.468809073724007Z" fill="#0070F0"></path>
+                </svg>
+                <span class="yoo-text">kassa</span>
+              </div>
+              
+              <img src="/tbank.jpg" class="pay-icon-large" alt="Т-Банк">
+              <img src="/SPB.png" class="pay-icon-large" alt="СБП">
+            </div>
+            <div class="geo-badges">
+              <span><img src="/google-maps.png" class="geo-icon" alt="map"> Новороссийск</span>
+              <span><img src="/google-maps.png" class="geo-icon" alt="map"> Анапа</span>
+              <span><img src="/google-maps.png" class="geo-icon" alt="map"> Геленджик</span>
+              <span class="geo-gray">Краснодарский край, Россия</span>
+            </div>
+            <div class="copyright">
+              © 2026 Руслан | Официальный IT-партнер
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
